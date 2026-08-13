@@ -33,7 +33,7 @@ def upload():
 
 
 #download files
-@app.route("/download/<filename>")
+@app.route("/download/<filename>",methods=['POST','GET'])
 def download(filename):
     return send_from_directory(app.config['UPLOAD_FOLDER'],
     filename,
